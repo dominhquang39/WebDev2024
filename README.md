@@ -10,7 +10,12 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *Đỗ Minh Quang*
-* ID: *22BI13379*
+* Name: *Lê Anh Quang*
+* ID: *22BI13380*
 * Group ID: *7*
 * Project Name: *Job Search Portal*
+
+Group Rule
+=======================
+When create new pull request, please choose branch name develop/*your name*
+PLEASE DO NOT CREATE PULL REQUEST ON OTHER MEMBER BRANCH
