@@ -9,10 +9,10 @@ Students are expected to:
 
 Student Info
 =======================
-* Name: Vu Ha Vy
-* ID: 22BI13485
-* Group ID: 7
-* Project Name: Job Search Portal
+* Name: *Do Minh Quang*
+* ID: *22BI13379*
+* Group ID: *7*
+* Project Name: *Job Search Portal*
 
 Group Rule
 =======================
