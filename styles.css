@@ -15,7 +15,7 @@ body {
 header {
     background-color: #2f2434;
     color: white;
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 
 header .container {
@@ -50,6 +50,99 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6); /* Change the border color of the button */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* General Navbar Styles */
+body {
+    background-color: #2D2537; /* Background color for visibility */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px; /* Spacing between navbar items */
+}
+
+/* Remove any vertical lines or borders */
+.navbar-nav .nav-link {
+    border: none;
+}
+
+/* Create the dot and border animation effect */
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 5px; /* Size of the dot */
+    height: 5px; /* Size of the dot */
+    background: #fff;
+    border-radius: 50%; /* Create a circular dot */
+    bottom: 0; /* Start position at the bottom */
+    left: 0;
+    z-index: 2; /* Make sure the dot is above the link */
+    opacity: 0; /* Hide the dot initially */
+    transition: opacity 0.3s ease;
+}
+
+/* Border animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1px solid #fff; /* Color of the border */
+    border-radius: 4px; /* Rounded corners for the rectangle */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide initially */
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+/* Hover effect to show the animation */
+.navbar-nav .nav-link:hover::before {
+    opacity: 1; /* Show the dot */
+    animation: moveDot 2s linear infinite; /* Move the dot around */
+}
+
+/* Animate the border around the item */
+.navbar-nav .nav-link:hover::after {
+    opacity: 1; /* Show the border */
+    width: 100%; /* Expand width first */
+    height: 100%; /* Then expand height */
+}
+
+/* Keyframes for moving the dot */
+@keyframes moveDot {
+    0% {
+        left: 0;
+        bottom: 0;
+    }
+    25% {
+        left: 100%;
+        bottom: 0;
+    }
+    50% {
+        left: 100%;
+        bottom: 100%;
+    }
+    75% {
+        left: 0;
+        bottom: 100%;
+    }
+    100% {
+        left: 0;
+        bottom: 0;
+    }
+}
+
 /* Banner Section */
 .banner {
     background-image: url('images/banner/job_image.jpeg'); 
@@ -64,43 +157,69 @@ nav ul li a:hover {
     padding: 80px 0;
 }
 
-/* Search Section */
+/* Search Section Styling */
 .search-section {
-    padding: 40px 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #ede5f15b; 
+    padding: 30px 0;
 }
 
 .search-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.search-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.search-section h2 {
-    font-size: 1.5rem;
-    text-align: left; 
-}
-
-.search-section input[type="text"],
-.search-section select {
-    padding: 20px;
+.search-form input, 
+.search-form select {
+    width: 30%; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 1rem;
-    width: 250px;
+    background-color: white;
 }
 
-.search-section button {
-    padding: 10px 20px;
+.search-form input::placeholder {
+    color: #999; 
+}
+
+.search-form select {
+    color: #666;
+}
+
+.search-button {
+    padding: 15px 30px;
     background-color: #785b85;
     color: white;
     border: none;
+    border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
 }
 
-.search-section button:hover {
-    background-color: #6b4e74;
+.search-button:hover {
+    background-color: #604a6b;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input, 
+    .search-form select,
+    .search-button {
+        width: 100%; 
+    }
 }
 
 
@@ -108,22 +227,21 @@ nav ul li a:hover {
 .featured-jobs {
     background: #f4f4f4;
     padding: 50px 0;
-    text-align: left; 
+    text-align: center; 
     margin: 0 auto; 
 }
 
 .featured-jobs h2 {
     font-size: 2.0rem;
-    padding-left: 270px;
     margin-bottom: 60px;
-    text-align: left; 
+    text-align: center; 
 }
 
 /* Job Listing Styling */
 .job-listing {
     background: white;
     padding: 20px;
-    margin: 20px 250px;
+    margin: 20px auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -131,26 +249,23 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.job-listing:hover {
-    border: 2px solid #785b85; 
-}
-
 /* Job Header */
 .job-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .company-logo {
     width: 60px; 
     height: 60px;
     border-radius: 8px;
+    margin-right: 20px;
 }
 
 .job-title-container {
     flex-grow: 1;
-    padding-left: 20px;
+    text-align: left;
 }
 
 .job-title-container h3 {
@@ -165,6 +280,7 @@ nav ul li a:hover {
     color: #5e3b66;
     border-radius: 15px;
     font-size: 0.9rem;
+    align-self: flex-start;
 }
 
 /* Apply Button Styling */
@@ -173,15 +289,20 @@ nav ul li a:hover {
     background-color: #785b85;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 1rem;
+    width: 150px;
+    height: 50px;
     cursor: pointer;
+}
+.apply-button:hover {
+    background-color: #5e3b66;
 }
 
 /* Job Details Styling */
 .job-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-top: 15px;
 }
 
@@ -193,16 +314,19 @@ nav ul li a:hover {
 
 .location-icon:before {
     content: "📍";
+    margin-left: 5px;
     margin-right: 5px;
 }
 
 .salary-icon:before {
     content: "💰";
+    margin-left: 5px;
     margin-right: 5px;
 }
 
 .time-icon:before {
     content: "⏳";
+    margin-left: 5px;
     margin-right: 5px;
 }
 
@@ -210,99 +334,110 @@ nav ul li a:hover {
 .best-job {
     background-color: #f8f9fa;
     padding: 60px 100px;
-  }
-  
-  .best-job .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .best-job .col-text {
-    flex: 1;
-    padding-right: 20px;
-  }
-  
-  .best-job .col-text h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .best-job .col-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #6c757d;
-  }
-  
-  .best-job .col-text .btn {
-    background-color: #785b85;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .best-job .col-image {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .best-job .col-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; 
-  }
-  
-  
-  /* Review Styling */
-  .review {
-    background-color: #e9ecef;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .review h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .review .row {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .review-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .review-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .review-card p {
-    font-size: 16px;
-    color: #6c757d;
-  }
-  
-  .review-card h4 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .review-card p:last-child {
-    font-size: 14px;
-    color: #6c757d;
-  }
+}
+
+.best-job .row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.best-job .col-text {
+flex: 1;
+padding-right: 20px;
+}
+
+.best-job .col-text h2 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.best-job .col-text p {
+font-size: 18px;
+margin-bottom: 30px;
+color: #6c757d;
+}
+
+.best-job .col-text .btn {
+background-color: #785b85;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.best-job .col-image {
+flex: 1;
+text-align: center;
+}
+
+.best-job .col-image img {
+max-width: 100%;
+height: auto;
+border-radius: 10px; 
+}
+
+
+/* Review Styling */
+.review {
+background-color: #e9ecef;
+padding: 60px 0;
+text-align: center;
+}
+
+.review h2 {
+font-size: 36px;
+margin-bottom: 40px;
+}
+
+.review .row {
+display: flex;
+justify-content: space-around;
+}
+
+.review-card {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+max-width: 300px;
+box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+margin-bottom: 20px;
+text-align: center;
+}
+
+.review-card img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-bottom: 15px;
+}
+
+.review-card p {
+font-size: 16px;
+color: #6c757d;
+}
+
+.review-card h4 {
+font-size: 20px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.review-card p:last-child {
+font-size: 14px;
+color: #6c757d;
+}
+
+.job-listing {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Move off-screen to the left */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation properties */
+}
+
+.job-listing.visible {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move back to original position */
+}
 
 /* Footer Styling */
 footer {
