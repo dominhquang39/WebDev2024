@@ -9,10 +9,10 @@ Students are expected to:
 
 Student Info
 =======================
-* Name: *Do Minh Quang*
-* ID: *22BI13379*
-* Group ID: *7*
-* Project Name: *Job Search Portal*
+* Name: Hồ Thanh Thủy Tiên
+* ID: 22BI13419
+* Group ID: 7
+* Project Name: Job Search Portal
 
 Group Rule
 =======================
