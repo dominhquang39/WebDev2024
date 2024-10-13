@@ -9,8 +9,8 @@ Students are expected to:
 
 Student Info
 =======================
-* Name: *Do Minh Quang*
-* ID: *22BI13379*
+* Name: Tran Bao Nguyen
+* ID: *22BI13342*
 * Group ID: *7*
 * Project Name: *Job Search Portal*
 

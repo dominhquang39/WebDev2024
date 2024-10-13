@@ -1,0 +1,38 @@
+[
+  {
+      "title": "Senior UX Designer",
+      "jobType": "Contract Base",
+      "country": "Australia",
+      "salary": "$30K-$35K",
+      "timeRemaining": "4 Days Remaining",
+      "logo": "Employers Logo.png",
+      "category": "Design"
+  },
+  {
+      "title": "Software Engineer",
+      "jobType": "Full Time",
+      "country": "China",
+      "salary": "$50K-$60K",
+      "timeRemaining": "4 Days Remaining",
+      "logo": "Employers Logo (1).png",
+      "category": "IT & Software"
+  },
+  {
+      "title": "Junior Graphic Designer",
+      "jobType": "Full Time",
+      "country": "Canada",
+      "salary": "$50K-$70K",
+      "timeRemaining": "4 Days Remaining",
+      "logo": "Employers Logo (2).png",
+      "category": "Design"
+  },
+  {
+      "title": "Product Designer",
+      "jobType": "Full Time",
+      "country": "United States",
+      "salary": "$35K-$40K",
+      "timeRemaining": "4 Days Remaining",
+      "logo": "Employers Logo (3).png",
+      "category": "Design"
+  }
+]
