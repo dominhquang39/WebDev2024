@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">WebPro</h1>
+            <div class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <div class="navbar-nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-light active" href="HomePage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="FindJobs.html">Find Jobs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Sign in</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section-->
+     <section class = "intro">
+        <h2>Find a job that suits your interest & skills.</h2>
+        <p>Aliquam vulputate purus in diam convallis finibus et in risus. Nullam in scelerisque leo, eget sollicitudin velit bestibulum.</p>
+        <div class="stats">
+        <div class="stat">
+            <img src="images/intro/intro1.png" alt="Icon for Live Jobs">
+            <div class="stat-info">
+                <p class="number" data-target="175324" data-start="173123" data-step="1">0</p>
+                <span>Live Jobs</span>
+            </div>
+        </div>
+        <div class="stat">
+            <img src="images/intro/intro2.png" alt="Icon for Companies">
+            <div class="stat-info">
+                <p class="number" data-target="97354" data-start="96000" data-step="1">0</p>
+                <span>Companies</span>
+            </div>
+        </div>
+        <div class="stat">
+            <img src="images/intro/intro3.png" alt="Icon for Candidates">
+            <div class="stat-info">
+                <p class="number" data-target="3847154" data-start="3640145" data-step="215">0</p>
+                <span>Candidates</span>
+            </div>
+        </div>
+        <div class="stat">
+            <img src="images/intro/intro4.png" alt="Icon for New Jobs">
+            <div class="stat-info">
+                <p class="number" data-target="7532" data-start="7300" data-step="1">0</p>
+                <span>New Jobs</span>
+            </div>
+        </div>
+    </div>
+     </section>
+
+    <!-- Job listing Section -->
+    <section class="vacancies">
+        <h2>Most Popular Vacancies</h2>
+        <ul>
+            <li>Software Developer <span>43,529 Open Positions</span></li>
+            <li>Healthcare <span>18,509 Open Positions</span></li>
+            <li>Data Scientist <span>23,220 Open Positions</span></li>
+            <li>Financial Manager <span>13,191 Open Positions</span></li>
+            <li>Management Analysis <span>90,848 Open Positions</span></li>
+            <li>IT Manager <span>50,985 Open Positions</span></li>
+            <li>Operations Research Analysis <span>16,827 Open Positions</span></li>
+        </ul>
+    </section>
+
+    <!--How it work Section-->
+    <section class="how-it-works">
+        <h2>How WebPro works</h2>
+        <div class="steps">
+            <div class="step" id="step1">
+                <img src="images/Step/step1.png" alt="Create Account" class="icon">
+                <h3>Create account</h3>
+                <p>Aliquam non posuere velit, eget scelerisque orci.</p>
+            </div>
+            <img src="images/Step/arrows.png" alt="Arrow" class="arrow" id="arrow1">
+            <div class="step" id="step2">
+                <img src="images/Step/step2.png" alt="Upload CV" class="icon">
+                <h3>Upload CV/Resume</h3>
+                <p>Fusce vel volutpat lectus at felis facilisis lacinia.</p>
+            </div>
+            <img src="images/Step/arrow_flip.png" alt="Arrow" class="arrow flip" id="arrow2">
+            <div class="step" id="step3">
+                <img src="images/Step/step3.png" alt="Find Job" class="icon">
+                <h3>Find suitable job</h3>
+                <p>Praesent sit amet velit a orci mollis efficitur.</p>
+            </div>
+            <img src="images/Step/arrows.png" alt="Arrow" class="arrow" id="arrow3">
+            <div class="step" id="step4">
+                <img src="images/Step/step4.png" alt="Apply" class="icon">
+                <h3>Apply job</h3>
+                <p>Donec auctor ligula eget justo feugiat pulvinar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Review Section-->
+    <section class="review">
+        <div class="review-container row align-items-center">
+            <div class="float-in float-in-left col-md-6">
+                <div class="review-image">
+                    <img src="images/banner/banner-bg.png" alt="Review Image">
+                </div>
+            </div>
+            <div class="float-in float-in-right col-md-6 ">
+                <div class="review-content">
+                    <p class="review-tagline">Testimonial</p>
+                    <h2>What our people say</h2>
+                    <div class="review-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="review-text">
+                        “Curabitur vitae aliquam risus. Mauris quis vehicula nisl, sed commodo ipsum. Praesent semper diam ut diam elementum, ut scelerisque nibh commodo. Integer faucibus porttitor vehicula. Maecenas venenatis dictum ligula.”
+                    </p>
+                    <p class="review-author">
+                        <strong>Darrell</strong><br>
+                        Professional
+                    </p>
+                    <div class="review-navigation">
+                        <button class="nav-button">&larr;</button>
+                        <button class="nav-button">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!--Rehister now-->
+    <section class="register">
+        <div class="register-option">
+            <h3>Become a Candidate</h3>
+            <p>Ready to apply for your dream job? Register now and start your journey with us.</p>
+            <a href="#" class="btn">Register Now</a>
+        </div>
+        <div class="register-option">
+            <h3>Become an Employer</h3>
+            <p>Looking to hire the best talent? Sign up to connect with top candidates.</p>
+            <a href="#" class="btn">Register Now</a>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WebPro - Group 7. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

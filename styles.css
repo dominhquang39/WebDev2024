@@ -1,0 +1,667 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Match the review section */
+}
+
+/* Header styling */
+header {
+    background-color: #2f2434;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6); 
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px; 
+    border: none;
+}
+    
+    /* Underline effect using ::before */
+.navbar-nav .nav-link::before {
+content: '';
+position: absolute;
+width: 0; /* Start with 0 width */
+height: 2px; /* Set height to 2px for underline */
+background: #fff; /* Color of the underline */
+bottom: 0; /* Position it at the bottom */
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+transition: width 0.5s ease; /* Smooth transition for underline */
+}
+    
+    /* Expand underline on hover */
+.navbar-nav .nav-link:hover::before {
+width: 100%; /* Expand underline to full width */
+}
+
+/*Intro*/
+.intro {
+    background: url('images/banner/job_blurbg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    padding: 80px 0;
+    color: #F4F4F4;
+    text-align: left;
+    position: relative;
+}
+
+.intro h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 80px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow for clarity on images */
+}
+
+.intro p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: 80px;
+}
+
+/*intro stats*/
+.stats {
+    display: flex;
+    justify-content: left;
+    margin-left: 80px;
+    flex-wrap: wrap;
+    gap: 40px; 
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 300px; 
+    height: 100px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: left; 
+    padding-left: 20px;
+}
+
+.stat img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.stat-info p {
+    font-size: 24px;
+    margin: 0;
+    color: #333; 
+}
+
+.stat-info span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+
+/*Vacancies*/
+.vacancies {
+    padding: 80px; 
+    background-color: #f4f4f4;
+}
+
+.vacancies h2 {
+    text-align: left; 
+    margin-left: 15px;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.vacancies ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-left: 10px; 
+    list-style: none;
+}
+
+.vacancies li {
+    text-align: left;
+    padding: 10px;
+}
+
+.vacancies span {
+    display: block; 
+    font-size: 0.9em; 
+    color: gray; 
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.step {
+    max-width: 220px;
+    text-align: center;
+}
+
+.step img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+}
+
+.arrow {
+    width: 400px; 
+    height: 30px;
+    margin: 0 20px;
+}
+
+.arrow.flip {
+    margin-top: 50px; 
+}
+
+/* Review Section */
+.review {
+    display: flex;
+    padding: 100px 0;
+    margin-top: 180px;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    width: 100%;
+    height: 350px;
+    background-color: #D7CFDA; 
+    position: relative;
+    z-index: 1;
+    align-items: center; 
+}
+
+.review-image {
+    position: relative;
+    width: 100%; 
+    z-index: 2;
+    top: -100px; 
+    margin-left: 150px;
+}
+
+.review-image img {
+    width: 550px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.review-content {
+    text-align: left;
+    max-width: 500px;
+    position: relative;
+    top: -170px;
+    
+}
+
+.review-tagline {
+    color: #785B85; 
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.review-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    color: #ff9900;
+    margin-top: 80px;
+    position: relative;
+    top: -20px;
+}
+
+.review-text {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.review-author {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.review-navigation {
+    display: flex;
+    justify-content: flex-start; 
+    position: relative; 
+    top: 120px;
+    z-index: 3; 
+}
+
+.nav-button {
+    background-color: #D7CFDA; 
+    border: none;
+    color: #785B85;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    margin: 0 5px; 
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.nav-button:hover {
+    background-color: #b39ddb;
+}
+
+/* Register Section */
+.register {
+    background-color: #f4f4f4; 
+    padding: 100px 0; 
+    margin-top: 150px;
+    display: flex; 
+    justify-content: center;
+    gap: 70px;
+}
+
+.register-option {
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 650px; 
+    height: 250px; 
+    padding-left: 20px;
+    padding-top: 50px;
+
+}
+
+.register-option:first-child {
+    background-color: #E4E5E8;
+    color: rgb(18, 17, 17);
+}
+
+.register-option:nth-child(2) {
+    background-color:#785B85;
+    color: rgb(18, 17, 17);
+}
+
+.register-option h3 {
+    font-size: 24px;
+    margin: 0 20px 15px 20px;
+}
+
+.register-option p {
+    font-size: 16px;
+    margin: 0 20px 15px 20px;
+}
+
+.register-option .btn {
+    background-color: white; 
+    color: #785B85; 
+    padding: 10px 20px; 
+    margin: 0 20px 15px 20px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.register-option .btn:hover {
+    background-color: #d1c4e9; 
+}
+
+/* Search Section */
+.search-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.search-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-section h2 {
+    font-size: 1.5rem;
+    text-align: left; 
+}
+
+.search-section input[type="text"],
+.search-section select {
+    padding: 20px;
+    font-size: 1rem;
+    width: 250px;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: #785b85;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #6b4e74;
+}
+
+
+/* Featured Jobs Section */
+.featured-jobs {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: left; 
+    margin: 0 auto; 
+}
+
+.featured-jobs h2 {
+    font-size: 2.0rem;
+    padding-left: 270px;
+    margin-bottom: 60px;
+    text-align: left; 
+}
+
+/* Job Listing Styling */
+.job-listing {
+    background: white;
+    padding: 20px;
+    margin: 20px 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.job-listing:hover {
+    border: 2px solid #785b85; 
+}
+
+/* Job Header */
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-logo {
+    width: 60px; 
+    height: 60px;
+    border-radius: 8px;
+}
+
+.job-title-container {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.job-title-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.job-type {
+    padding: 5px 10px;
+    background-color: #d8c5e2;
+    color: #5e3b66;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Apply Button Styling */
+.apply-button {
+    padding: 10px 20px;
+    background-color: #785b85;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Job Details Styling */
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.job-details p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.location-icon:before {
+    content: "📍";
+    margin-right: 5px;
+}
+
+.salary-icon:before {
+    content: "💰";
+    margin-right: 5px;
+}
+
+.time-icon:before {
+    content: "⏳";
+    margin-right: 5px;
+}
+
+/* Intro Styling */
+.best-job {
+    background-color: #f8f9fa;
+    padding: 60px 100px;
+  }
+  
+  .best-job .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .best-job .col-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .best-job .col-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .best-job .col-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #6c757d;
+  }
+  
+  .best-job .col-text .btn {
+    background-color: #785b85;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .best-job .col-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .best-job .col-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+  }
+  
+/* Footer Styling */
+footer {
+    background: #2f2434;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Home Page - How it works*/
+/* Hover effect on step */
+/* Common Styles */
+.step {
+    position: relative;
+    transition: transform 0.3s;
+}
+.arrow {
+    transition: filter 0.3s;
+}
+.icon {
+    transition: transform 0.3s;
+    border-radius: 50%;
+}
+
+.step:hover .icon {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 1px #6721ff; /* Creates a rounded border around the icon */
+}
+
+.arrow:hover {
+    filter: drop-shadow(0 0 2px #6721ff);
+}
+
+
+/*Float*/
+/* Define keyframes for float-in animations */
+@keyframes floatInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation classes */
+.float-in-left.active {
+    animation: floatInLeft 1s ease-out forwards;
+}
+
+.float-in-right.active {
+    animation: floatInRight 1s ease-out forwards;
+}
+
+/* Hide the elements initially */
+.review-container .float-in {
+    opacity: 0;
+}
