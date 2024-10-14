@@ -1,0 +1,139 @@
+.header-aboutus {
+    background: url('../../images/banner/job_blurbg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    padding: 80px 0;
+    color: #F4F4F4;
+    text-align: left;
+    position: relative;
+}
+
+.aboutus-container {
+    display: flex; 
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.rectangle {
+    width: 10px;
+    height: 100px; 
+    margin-left: 10px; 
+    background-color: #9B59B6; 
+}
+
+.aboutus-container h2{
+    font-size: 50px;
+    margin-left: 30px;
+    margin-top: -50px;
+}
+
+.linktopage {
+    margin-top: -50px;
+    font-size: 35px;
+    margin-left: 130px;
+    color: #ffffff;
+}
+.linktopage a {
+    text-decoration: none;
+    color: #D0C6D5;
+}
+
+.linktopage a:hover {
+    text-decoration: underline;
+}
+
+/*Our mission*/
+.mission img {
+    width: 800px;
+    padding-right: 300px;
+    
+}
+.mission {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10;
+}
+.missiontext {
+    padding-top: 20px;
+    width: auto;
+    padding-right: 80px;
+}
+.mission p {
+    font-size: 80%;
+    color : #767F8C;
+    padding-left: 50%;
+    font-size: 1em;
+}
+
+.mission h3 {
+    font-size: 30px;
+    padding-left: 50%;
+}
+
+footer {
+    background: #2f2434;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Float-in effect*/
+
+@keyframes floatInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation classes */
+.float-in-left.active {
+    animation: floatInLeft 1s ease-out forwards;
+}
+
+.float-in-right.active {
+    animation: floatInRight 1s ease-out forwards;
+}
+
+/* Hide the elements initially */
+.review-container .float-in {
+    opacity: 0;
+}

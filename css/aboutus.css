@@ -1,0 +1,213 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F4F4F4;
+}
+
+.navigation header {
+    background-color: #2f2434;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content{
+    color: white;
+    background-image: url(../img/Frame\ 3.png);
+    height: 90vh;
+    background-size: cover;
+    background-position: center; ;
+}
+.header-content {
+    margin-bottom: 20px;
+    display: flex;
+    padding-left: 20%;
+    padding-top: 320px;
+}
+
+.header-content h2 {
+    padding-left: 60px;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.mission img {
+    width: 800px;
+    padding-right: 300px;
+    
+}
+.mission {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.missiontext {
+    padding-top: 110px;
+    width: auto;
+    padding-right: 80px;
+}
+.mission p {
+    font-size: 20px;
+    color : #767F8C;
+    padding-left: 400px;
+    margin-right: 20px;
+}
+
+.mission h3 {
+    font-size: 30px;
+    padding-left: 400px;
+}
+
+
+.testimonials {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-image {
+    width: 400px;
+    height: auto;
+}
+
+.titlereview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.textreview {
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.rating-image {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.titlereview p {
+    margin: 0;
+}
+
+.titlereview h2 {
+    margin: 10px 0;
+}
+
+.textreview p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.cta {
+    padding: 40px 0;
+    color: black;
+    text-align: center;
+}
+
+.cta-box {
+    display: inline-block;
+    width: 30%;
+    background-color: #E4E5E8;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: left;
+    
+}
+
+.cta-box p {
+    padding-bottom: 30px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.cta-box:hover {
+    background-color: #785B85; 
+    color: #fff; 
+}
+
+.cta-box h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.cta-box button {
+    padding: 20px 30px;
+    color: #785B85;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #2f2434;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
