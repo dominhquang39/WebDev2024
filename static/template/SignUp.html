@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../style/signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="logo">
+                <img src="../../images/signup/bag.png">
+                <h1> WebPro</h1>
+            </div>
+            <div class="select-user-type">
+                <h2>Create account.</h2>
+                <select id="user-type">
+                    <option value="employer">Employers</option>
+                    <option value="candidate">Candidates</option>
+                </select>
+            </div>
+            <p>Already have an account? <a href="Login.html">Log In</a></p>
+            <form>
+                <div class="input-group">
+                    <div class = "input-row" >
+                        <input type="text" id="full-name" placeholder="Full Name" required>
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email address" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I’ve read and agree with your <a href="#">Terms of Services</a></label>
+                </div>
+                <button id="create-account-btn" type="submit" class="btn">Create Account</button>
+            </form>
+        </div>
+        <div class="info-container">
+            <div class="info-content">
+                <h3>Over 1,75,324 candidates waiting for good employees.</h3>
+                <div class="stats">
+                    <div class="stat">
+                        <img class="icon" src = "../../images/signup/bagwframe.png">
+                        <div class="stat-text">
+                            <h3>1,75,324</h3>
+                            <p>Live Jobs</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <img class="icon" src = "../../images/signup/building.png">
+                        <div class="stat-text">
+                                <h3>97,534</h3>
+                                <p>Companies</p>
+                    </div>              
+                    </div>
+                    <div class="stat">
+                        <img class="icon" src = "../../images/signup/bagwframe.png">
+                        <div class="stat-text">
+                            <h3>7,532</h3>
+                            <p>New Jobs</p>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../source/sign_up.js"></script>
+</body>
+</html>

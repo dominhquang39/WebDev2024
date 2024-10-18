@@ -1,0 +1,128 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Match the review section */
+}
+
+/* Header styling */
+header {
+    background-color: #2f2434;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*Navbar*/
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6); 
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px; 
+    border: none;
+}
+
+.navbar-nav .nav-link::before {
+content: '';
+position: absolute;
+width: 0; 
+height: 2px; 
+background: #fff; 
+bottom: 0; 
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+transition: width 0.5s ease; 
+}
+    
+.navbar-nav .nav-link:hover::before {
+width: 100%; 
+}
+
+#home_page .navbar-nav .nav-link[href="HomePage.html"]::before {
+    width:100%;
+}
+
+#find_jobs .navbar-nav .nav-link[href="FindJobs.html"]::before {
+    width:100%;
+}
+
+#about_us .navbar-nav .nav-link[href="AboutUs.html"]::before {
+    width:100%;
+}
+
+
+  
+/* Footer Styling */
+footer {
+    background: #2f2434;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
